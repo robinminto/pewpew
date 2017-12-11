@@ -1,4 +1,5 @@
 ### IPew Attack Map
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ![img](pewpew.png)
 
@@ -26,12 +27,16 @@ IPew includes the following sounds:
 - `b5=1` - Babylon 5 defense grid cannons!
 - `pew=1` - Somewhat disturbing human-made "pew-pew" sound
 - `galaga=1` - Classic arcade sound!
+- `asteroids=1` - ASTEROIDS!
+- `china=1` - Trump saying "China!"
+- `timallen=1` - Tim Allen's AUUUGH?!
 
 To turn off sound effects (but, but, _why?_ :-), use `nofx=1`, and to randomly cycle through them all use `allfx=1`
 
 By default, IPew will use a statistical model for choosing source countries for the attacks, but you can level the playing field and set `random_mode=1` to give all countries the same cyber-advatage.
 
-In similar vein, and using the perpsective many prominent security vendors and pundits seem to have, you can make all cyber attacks from from China with `china_mode=1` or from North Korea with `dprk_mode=1`.
+In similar vein, and using the perpsective many prominent security vendors and pundits seem to have, you can make all cyber attacks come from China with `china_mode=1` or from North Korea with `dprk_mode=1`.
+
 
 IPew's default attack timing is based on observational data from many sources, but you can make it look like the world is on the brink of cyber collapse by setting `bad_day=1`.
 
@@ -39,9 +44,20 @@ Finally, you can proudly display your organization's name by setting `org_name=M
 
 ### Drill Mode
 
-We had an interesting request to be able to use IPew in a IR "drill" setting, so there's now a "drill mode" where you can specify a latitude &amp; longitude to be the destination for the attacks. Right now, all attacks go there, but we may add an option to specify a percentage of attacks that should go there. You _must_ use `drill_mode=1&lat=##.####&lon=##.####` for this to work, like: `drill_mode=1&lat=43.2672&lon=-70.8617` (which would focus all attacks near @hrbrmstr). Remember, you can specify your organization name there, too. [Here's an example](http://ocularwarfare.com/ipew/index.html?org_name=hrbrmstr&drill_mode=1&lat=43.2672&lon=-70.8617).
+We had an interesting request to be able to use IPew in a IR "drill" setting, so there's now a "drill mode" where you can specify a latitude &amp; longitude to be the destination for the attacks. Right now, all attacks go there, but we may add an option to specify a percentage of attacks that should go there. You _must_ use `drill_mode=1&lat=##.####&lon=##.####` for this to work, like: `drill_mode=1&lat=43.2672&lon=-70.8617` (which would focus all attacks near @hrbrmstr). Remember, you can specify your organization name there, too. [Here's an example](http://ocularwarfare.com/index.html?org_name=hrbrmstr&drill_mode=1&lat=43.2672&lon=-70.8617).
 
-One of my personal favorites is [http://ocularwarfare.com/ipew/index.html?china_mode=1&org_name=Mandiant&bad_day=1](http://ocularwarfare.com/ipew/index.html?china_mode=1&org_name=Mandiant&bad_day=1).
+One of my personal favorites is [http://ocularwarfare.com/index.html?china_mode=1&org_name=Mandiant&bad_day=1](http://ocularwarfare.com/index.html?china_mode=1&org_name=Mandiant&bad_day=1).
+
+### Blame former employee mode
+
+If you want to show that former employees are the problem, try out
+employee_mode. You can set a first and last name for the employee and also
+set a latitude and longitude.
+[http://ocularwarfare.com/index.html?org_name=Verizon&employee_mode=1&employee_fname=Kevin&employee_lname=Thompson&lat=43.2672&lon=-70.8617](http://ocularwarfare.com/index.html?org_name=Verizon&employee_mode=1&employee_fname=Kevin&employee_lname=Thompson&lat=43.2672&lon=-70.8617)
+
+### No activity
+
+Just use `norse_mode=1` as a parameter
 
 ### Using IPew
 
